@@ -1,0 +1,26 @@
+{
+  "name": "eduweb",
+  "version": "1.0.0",
+  "description": "\"Educational Website\"",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "build": "cd client && npm run build && ",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start:prod": "SET NODE_ENV=production & node server",
+    "start:dev": "nodemon server"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.18",
+    "morgan": "^1.10.0",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
