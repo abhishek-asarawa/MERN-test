@@ -4,7 +4,7 @@ import { MONGODB_URL } from "../config/mongoURL.js";
 
 
 // connecting to db
-mongoose.connect(MONGODB_URL, {
+mongoose.connect(MONGODB_URL || "mongodb://localhost/mern", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

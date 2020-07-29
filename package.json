@@ -1,11 +1,11 @@
 {
-  "name": "eduweb",
+  "name": "mern-project-robin",
   "version": "1.0.0",
-  "description": "\"Educational Website\"",
+  "description": "\"MERN PROJECT\"",
   "main": "server.js",
   "type": "module",
   "scripts": {
-    "build": "cd client && npm run build && ",
+    "build": "cd client && npm run build",
     "install-client": "cd client && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start:prod": "SET NODE_ENV=production & node server",
