@@ -6,7 +6,7 @@
   "scripts": {
     "install-client": "cd client && npm install && cd ..",
     "heroku-postbuild": "npm run install-client && npm run react-build",
-    "start": "SET NODE_ENV=production && npm run build && node ./build/server.js",
+    "start": "set NODE_ENV=production && npm run build && node ./build/server.js",
     "start:dev": "npm run build && npm run react-build && nodemon ./build/server.js",
     "build": "npm run clean && npm run build-babel",
     "build-babel": "babel -d ./build ./server -s",
