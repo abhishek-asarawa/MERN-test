@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "\"MERN PROJECT\"",
   "main": "server.js",
+  "babel": {
+    "presets": ["@babel/preset-env"]
+  },
   "scripts": {
     "install-client": "cd client && npm install && cd ..",
     "heroku-postbuild": "npm run install-client && npm run react-build",
