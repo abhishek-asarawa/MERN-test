@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "\"MERN PROJECT\"",
   "main": "server.js",
-  "babel": {
-    "presets": ["@babel/preset-env"]
-  },
   "scripts": {
     "install-client": "cd client && npm install && cd ..",
     "heroku-postbuild": "npm run install-client && npm run react-build",
@@ -22,13 +19,13 @@
     "express": "^4.17.1",
     "mongoose": "^5.9.18",
     "morgan": "^1.10.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",
-    "babel-preset-env": "^1.7.0",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.4",
     "rimraf": "^3.0.2"
