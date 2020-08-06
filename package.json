@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "\"MERN PROJECT\"",
   "main": "server.js",
-  "type": "module",
   "scripts": {
-    "build": "cd client && npm run build",
-    "install-client": "cd client && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build",
-    "start:prod": "SET NODE_ENV=production & node server",
-    "start:dev": "nodemon server"
+    "install-client": "cd client && npm install && cd ..",
+    "heroku-postbuild": "npm run install-client && npm run react-build",
+    "start:prod": "SET NODE_ENV=production && npm run build && node ./build/server.js",
+    "start:dev": "npm run build && npm run react-build && nodemon ./build/server.js",
+    "build": "npm run clean && npm run build-babel",
+    "build-babel": "babel -d ./build ./server -s",
+    "clean": "rm -rf build && mkdir build",
+    "react-build": "cd client && npm run build && cd .."
   },
   "author": "",
   "license": "MIT",
@@ -20,7 +22,12 @@
     "dotenv": "^8.2.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.7.0",
     "dotenv": "^8.2.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2"
   }
 }
