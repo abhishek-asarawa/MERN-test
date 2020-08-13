@@ -5,7 +5,7 @@ const SigninRoutes = [
     {
         path: WEB_URL.SIGNIN,
         exact: true,
-        isProtected: true,
+        isProtected: false,
         component: Signin
     }
 ];

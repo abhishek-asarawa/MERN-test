@@ -12,5 +12,5 @@ var _dotenv2 = _interopRequireDefault(_dotenv);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv2.default.config();
-var MONGODB_URL = exports.MONGODB_URL = process.env.MONGODB_URL;
+const MONGODB_URL = exports.MONGODB_URL = process.env.MONGODB_URL;
 //# sourceMappingURL=mongoURL.js.map

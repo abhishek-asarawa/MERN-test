@@ -2,11 +2,12 @@ import React, { Fragment } from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default React.memo(function Signin(props) {
-    const {inputHandler, submitHandler, formData:{email, password, address, zip, city, state}} = props;
+    const {inputHandler, submitHandler, error, formData:{email, password, address, zip, city, state}} = props;
 
   return (
       <Fragment>
         <h3>Signin</h3>
+        {!!error && <div className="alert alert-danger">{error}</div>}
         <Form onSubmit={submitHandler}>
             <Row form>
                 <Col md={6}>

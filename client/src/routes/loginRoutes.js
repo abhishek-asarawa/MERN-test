@@ -5,7 +5,7 @@ const loginRoutes = [
     {
         path: WEB_URL.LOGIN,
         exact: true,
-        isProtected: true,
+        isProtected: false,
         component: Login
     }
 ];

@@ -1,8 +1,10 @@
 import React from 'react';
-import { Switch, Route } from "react-router-dom";
+import { Switch } from "react-router-dom";
 import _ from "lodash";
 import routes from "./routes";
 import Layout from "./containers/Layout";
+import { PrivateRoute } from './components';
+import { PublicRoute } from './components';
 
 function App() {
   return (
@@ -10,8 +12,12 @@ function App() {
       <Switch>
       {
         _.map(routes, (route, idx) => {
+          console.log(route);
           return (
-            <Route {...route} key={idx}/>
+            // <Route {...route} key={idx}/>
+            !!route.isProtected ?
+                <PrivateRoute {...route} key={idx} /> :
+                <PublicRoute {...route} key={idx} />
           );
         })
       }

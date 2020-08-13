@@ -2,10 +2,12 @@ import React, { Fragment } from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 export default React.memo(function login(props) {
-  const { submitHandler, inputHandler, formData:{email, password}} = props;
+  const { submitHandler, inputHandler, formData:{email, password}, error} = props;
   return (
     <Fragment>
       <h3>LOGIN</h3>
+      <hr></hr>
+      {!!error && <div className="alert alert-danger">{error}</div>}
       <Form onSubmit={submitHandler}>
         <FormGroup>
           <Label for="Email">Email</Label>

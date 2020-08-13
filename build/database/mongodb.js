@@ -15,7 +15,5 @@ _mongoose2.default.connect(_mongoURL.MONGODB_URL || "mongodb://localhost/mern", 
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: true
-}).then(console.log('database is connected...')).catch(function (err) {
-    return console.log(err);
-});
+}).then(console.log('database is connected...')).catch(err => console.log(err));
 //# sourceMappingURL=mongodb.js.map
