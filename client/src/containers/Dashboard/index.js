@@ -1,16 +1,9 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { DashBoard } from "../../components";
 // import { httpRequest, WEB_URL } from "../../config"
 // import { response } from "express";
 
 class Dashboard extends React.Component {
-
-    state = {
-        name: "",
-        email: "",
-        address: "",
-        city: ""
-    }
 
     // componentDidMount(){
     //     const reponse = httpRequest({
@@ -23,9 +16,16 @@ class Dashboard extends React.Component {
 
     render () {
         return (
+            <Fragment>
             <DashBoard />
+            <button 
+                onClick={() => 
+                    this.props.history.push("/calculator")}
+                >Use Calculator
+            </button>
+            </Fragment>
         );
     };
 };
 
-export default Dashboard;
+export default React.memo(Dashboard);

@@ -3,5 +3,6 @@ export default {
     LOGIN: "/login",
     SIGNIN: "/signin",
     PROFILE: "/profile",
-    DASHBOARD: "/dashboard"
+    DASHBOARD: "/dashboard",
+    CALCULATOR: "/calculator"
 };

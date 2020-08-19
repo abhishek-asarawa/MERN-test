@@ -60,4 +60,4 @@ class Signin extends Component{
 };
 
 
-export default Signin;
+export default React.memo(Signin);

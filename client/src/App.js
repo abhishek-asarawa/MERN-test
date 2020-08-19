@@ -12,7 +12,6 @@ function App() {
       <Switch>
       {
         _.map(routes, (route, idx) => {
-          console.log(route);
           return (
             // <Route {...route} key={idx}/>
             !!route.isProtected ?
