@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# google client
+/client/src/config/google.json
+
 # testing
 /coverage
 

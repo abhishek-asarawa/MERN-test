@@ -4,5 +4,7 @@ export default {
     SIGNIN: "/signin",
     PROFILE: "/profile",
     DASHBOARD: "/dashboard",
-    CALCULATOR: "/calculator"
+    CALCULATOR: "/calculator",
+    TODO: "/todo",
+    TEST: "/test"
 };
